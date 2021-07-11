@@ -44,11 +44,11 @@ class Thai_GDCPlugin(plugins.SingletonPlugin, DefaultTranslation, toolkit.Defaul
         remove_whitespace = toolkit.get_validator('remove_whitespace')
 
         schema.update({
-            'ckan.promoted_banner': [ignore_missing, unicode, remove_whitespace],
-            'ckan.site_org_address': [ignore_missing, unicode],
-            'ckan.site_org_contact': [ignore_missing, unicode],
-            'ckan.site_org_email': [ignore_missing, unicode],
-            'ckan.site_policy_link': [ignore_missing, unicode],
+            'ckan.promoted_banner': [ignore_missing, str, remove_whitespace],
+            'ckan.site_org_address': [ignore_missing, str],
+            'ckan.site_org_contact': [ignore_missing, str],
+            'ckan.site_org_email': [ignore_missing, str],
+            'ckan.site_policy_link': [ignore_missing, str],
         })
 
         return schema
@@ -111,7 +111,7 @@ class Thai_GDCPlugin(plugins.SingletonPlugin, DefaultTranslation, toolkit.Defaul
         
     
 def tag_name_validator(value, context):
-    tagname_match = re.compile('[\w \-.]*$', re.UNICODE)
+    tagname_match = re.compile('[\w \-.]*$', re.str)
     #if not tagname_match.match(value):
     if not tagname_match.match(value, re.U):
         raise Invalid(_('Tag "%s" must be alphanumeric '
