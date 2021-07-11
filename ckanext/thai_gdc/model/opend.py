@@ -1,65 +1,16 @@
 # -*- coding: utf-8 -*-
 import ckan.model as model
 import ckan.plugins.toolkit as toolkit
-from sqlalchemy.exc import SQLAlchemyError
-import logging
-
-log = logging.getLogger(__name__)
 
 class OpendModel:
-    def get_dataset_bulk_import_log(self, import_id):
-        sql = "select split_part(split_part(\"data\",'\"import_log\": \"',2),'\\n\"}',1) as log_content from activity a where \"data\" like '%\"import_id\": \""+import_id+"\", \"import_status\": \"Running\"%'"
-
-        resultproxy = model.Session.execute(sql)
-
-        data = []
-        for rowproxy in resultproxy:
-            my_dict = {column: value for column, value in rowproxy.items()}
-            data.append(my_dict)
-
-        return data
-
-    def get_users_non_member(self):
-        sql = '''
-            select u.id from "user" u where u.sysadmin is false and u.state = 'active' and u.id not in  (select distinct m.table_id from "member" m where m.table_name = 'user' and m.state = 'active')
-        '''
-
-        resultproxy = model.Session.execute(sql)
-
-        data = []
-        for rowproxy in resultproxy:
-            my_dict = {column: value for column, value in rowproxy.items()}
-            data.append(my_dict)
-
-        return data
 
     def get_all_view(self):
         sql = '''
             select sum(count) as page_view from tracking_summary where tracking_type = 'page'
         '''
-        try:
-            resultproxy = model.Session.execute(sql)
-            row = resultproxy.fetchone()
-            model.Session.commit()
-            return row['page_view'] is not None and row['page_view'] or 0
-        except SQLAlchemyError as e:
-            print(str(e))
-            model.Session.rollback()
-            return 0
-
-    def get_last_update_tracking(self):
-        sql = '''
-            select max(tracking_date) as last_tracking from tracking_summary
-        '''
-        try:
-            resultproxy = model.Session.execute(sql)
-            row = resultproxy.fetchone()
-            model.Session.commit()
-            return row['last_tracking'] is not None and row['last_tracking'] or 0
-        except SQLAlchemyError as e:
-            print(str(e))
-            model.Session.rollback()
-            return 0
+        resultproxy = model.Session.execute(sql)
+        row = resultproxy.fetchone()
+        return row['page_view'] is not None and row['page_view'] or 0
 
     def get_resource_download_top(self, limit):
         sql = '''
@@ -122,24 +73,6 @@ class OpendModel:
             resultproxy = model.Session.execute(sql)
         except:
             return None
-
-        data = []
-        for rowproxy in resultproxy:
-            my_dict = {column: value for column, value in rowproxy.items()}
-            data.append(my_dict)
-
-        return data
-    
-    def get_groups_all_type(self, type=None):
-        sql = '''
-            select gr.id, gr.title as display_name, gr.type from "group" gr where is_organization = false and state = 'active'
-        '''
-        if type:
-            sql = sql + '''
-             and "type"='{}'
-        '''.format(type)
-        
-        resultproxy = model.Session.execute(sql)
 
         data = []
         for rowproxy in resultproxy:

@@ -1,13 +1,33 @@
-{% ckan_extends %}
+{% set intro = g.site_intro_text %}
+
+<div class="module-content box" style="margin-top: 15px;">
+  <header>
+    {% if intro %}
+      {{ h.render_markdown(intro) }}
+    {% else %}
+      <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+      <p>
+        {% trans %}This is a nice introductory paragraph about CKAN or the site
+        in general. We don't have any copy to go here yet but soon we will
+        {% endtrans %}
+      </p>
+    {% endif %}
+  </header>
 
   {% block home_image %}
     <section class="featured media-overlay hidden-xs">
+      <!--<h2 class="media-heading">{% block home_image_caption %}{{ _("This is a featured section") }}{% endblock %}</h2>-->
       {% block home_image_content %}
-        {% if g.promoted_banner %}
-          <img class="img-responsive" style="min-width: 100%;" src="{{ h.url_for_static(g.promoted_banner) }}" width="420" height="220" />
+        {% set site_protocol_and_host = h.get_site_protocol_and_host() %}
+        {% set promoted_banner_page = h.thai_gdc_get_page('promoted-banner') %}
+        {% if promoted_banner_page and site_protocol_and_host[0]+'://'+site_protocol_and_host[1] in promoted_banner_page[0].content %}
+          {% set list1 = promoted_banner_page[0].content.split(site_protocol_and_host[0]+'://'+site_protocol_and_host[1]) %}
+          {% set list2 = list1[1].split('"') %}
+          <img class="img-responsive" style="min-width: 100%;" src="{{ h.url_for_static(list2[0]) }}" width="420" height="220" />
         {% else %}
-          <img class="img-responsive" style="min-width: 100%;" src="{{ h.url_for_static('/base/images/gdc-banner.jpg') }}" alt="Placeholder" width="420" height="220" />
+          <img class="img-responsive" style="min-width: 100%;" src="{{ h.url_for_static_or_external(g.promoted_banner) }}" alt="Placeholder" width="420" height="220" />
         {% endif %}
       {% endblock %}
     </section>
   {% endblock %}
+</div>
