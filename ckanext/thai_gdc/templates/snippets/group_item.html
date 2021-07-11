@@ -1,0 +1,20 @@
+{% ckan_extends %}
+        {% block group_item_header_description %}
+
+          {% if group.package_count %}
+            {% if group.package_count > 1 %}
+              {% set text_num = _('{num} Datasets') %}
+            {% else %}
+              {% set text_num = _('{num} Dataset') %}
+            {% endif %}
+      <strong class="package_count">{{ text_num.format(num=group.package_count) }}</strong>
+    {% elif group.package_count == 0 %}
+      <span class="package_count">{{ _('0 Datasets') }}</span>
+    {% endif %}
+        {% endblock %}
+
+        {% block group_item_content %}
+      {% set list_class = "list-unstyled dataset-list" %}
+      {% set item_class = "dataset-item module-content" %}
+      {#% snippet 'snippets/package_list_home.html', packages=group.packages, list_class=list_class, item_class=item_class, truncate=120 %#}
+    {% endblock %}

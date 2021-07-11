@@ -1,0 +1,193 @@
+/* Open Sans from Google Fonts */
+@import 'https://fonts.googleapis.com/css?family=Quicksand:400,500,700';
+@import 'https://fonts.googleapis.com/css?family=Prompt:400,500,700';
+/* Theme LESS assets */
+/* Colors */
+/* Fonts */
+@font-face {
+  font-family: 'sukhumvitBold';
+  src: url('../fonts/sukhumvitset/sukhumvitset-bold-webfont.woff2') format('woff2'),
+  url('../fonts/sukhumvitset/sukhumvitset-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sukhumvitLight';
+  src: url('../fonts/sukhumvitset/sukhumvitset-light-webfont.woff2') format('woff2'),
+  url('../fonts/sukhumvitset/sukhumvitset-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sukhumvitMedium';
+  src: url('../fonts/sukhumvitset/sukhumvitset-medium-webfont.woff2') format('woff2'),
+  url('../fonts/sukhumvitset/sukhumvitset-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sukhumvitSemiBold';
+  src: url('../fonts/sukhumvitset/sukhumvitset-semibold-webfont.woff2') format('woff2'),
+  url('../fonts/sukhumvitset/sukhumvitset-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sukhumvitText';
+  src: url('../fonts/sukhumvitset/sukhumvitset-text-webfont.woff2') format('woff2'),
+  url('../fonts/sukhumvitset/sukhumvitset-text-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'sukhumvitThin';
+  src: url('../fonts/sukhumvitset/sukhumvitset-thin-webfont.woff2') format('woff2'),
+  url('../fonts/sukhumvitset/sukhumvitset-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: #ffffff;
+  margin: 0;
+  font-family: "sukhumvitText";
+}
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page-heading,
+.media-heading {
+  font-family: "sukhumvitBold";
+}
+.btn {
+  font-family: "sukhumvitText";
+}
+.module-heading {
+  font-family: "sukhumvitBold";
+}
+.module-content h1 {
+  font-family: "sukhumvitText";
+}
+.news-header {
+  font-family: "sukhumvitText";
+}
+.news-item-title {
+  font-family: "sukhumvitText";
+}
+.add-dataset-modal {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 1050;
+  display: none;
+}
+.add-dataset-modal-box {
+  display: table-cell;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border-radius: 6px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  background-clip: padding-box;
+  outline: none;
+  text-align: center;
+}
+.add-dataset-modal-description {
+  margin-top: 30px;
+}
+.add-dataset-modal-description p {
+  font-weight: bold;
+}
+.add-dataset-modal-description ul {
+  text-align: left;
+}
+.add-dataset-modal .close {
+  font-size: 35px;
+  color: white;
+  position: relative;
+  top: -32px;
+}
+.add-dataset-modal-backdrop {
+  display: none;
+}
+#dataset-resources {
+  border: 1px solid #dddddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+#dataset-resources h3,
+#dataset-resources .search-form {
+  display: inline;
+}
+.resource-list {
+  margin-top: 15px;
+}
+.js .image-upload input[type=file] {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
+.nav-tabs .fa:last-child,
+.module-heading .fa:last-child,
+.btn .fa:last-child {
+  margin-right: 3px;
+}
+.resource-tracking-summary {
+  margin-top: -20px !important;
+  border-top: none !important;
+}
+.header {
+  font-family: sukhumvitBold;
+}
+h1, h2, h3 {
+  font-family: sukhumvitBold;
+}
+.masthead .section {
+  font-family: sukhumvitBold;
+}
+.divIconFooter {
+  float: left;
+  margin-right: 5px;
+}
+.iconFooter {
+  margin-right: 15px;
+  width: 15px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ml35px {
+  margin-left: 35px !important;
+}
+.totalVisitor {
+  color: #ffffff;
+  font-family: "sukhumvitBold";
+  font-size: 20px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.toolbar .breadcrumb a {
+  text-shadow: none;
+  color: #505050;
+}
+.textRecentViews {
+  color: #EF7100;
+  margin-left: 5px;
+  font-family: sukhumvitText;
+  font-size: 12px;
+}
+.package_count {
+  font-family: sukhumvitText;
+}
+.site-footer {
+  color: #ffffff;
+}
+.site-footer label {
+  color: #ffffff;
+}

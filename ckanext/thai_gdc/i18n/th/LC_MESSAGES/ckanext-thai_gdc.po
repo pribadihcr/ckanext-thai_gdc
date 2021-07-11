@@ -1,0 +1,228 @@
+# Thai translations for ckanext-thai_gdc.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the ckanext-thai_gdc
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-thai_gdc 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-05-25 14:17+0700\n"
+"PO-Revision-Date: 2020-07-14 11:17+0700\n"
+"Language: th\n"
+"Language-Team: th <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.2.4\n"
+
+msgid "Search data"
+msgstr "ค้นหาชุดข้อมูล"
+
+msgid "Visibility"
+msgstr "การเข้าถึง"
+
+msgid "License"
+msgstr "สัญญาอนุญาตให้ใช้ข้อมูล"
+
+msgid "Select at least one"
+msgstr "ไม่ถูกเลือก"
+
+msgid "Search dataset..."
+msgstr "ค้นหาชุดข้อมูล..."
+
+msgid "Search datasets..."
+msgstr "ค้นหาชุดข้อมูล..."
+
+msgid "Last Updated"
+msgstr "ปรับปรุงครั้งล่าสุดในระบบเมื่อ"
+
+msgid "Last updated"
+msgstr "ปรับปรุงครั้งล่าสุดเมื่อ"
+
+msgid "Created"
+msgstr "สร้างในระบบเมื่อ"
+
+msgid "Format"
+msgstr "นามสกุลของไฟล์"
+
+msgid "January"
+msgstr "มกราคม"
+
+msgid "February"
+msgstr "กุมภาพันธ์"
+
+msgid "March"
+msgstr "มีนาคม"
+
+msgid "April"
+msgstr "เมษายน"
+
+msgid "May"
+msgstr "พฤษภาคม"
+
+msgid "June"
+msgstr "มิถุนายน"
+
+msgid "July"
+msgstr "กรกฎาคม"
+
+msgid "August"
+msgstr "สิงหาคม"
+
+msgid "September"
+msgstr "กันยายน"
+
+msgid "October"
+msgstr "ตุลาคม"
+
+msgid "November"
+msgstr "พฤศจิกายน"
+
+msgid "December"
+msgstr "ธันวาคม"
+
+msgid "Just now"
+msgstr "เมื่อสักครู่"
+
+msgid "{number} dataset found"
+msgstr "พบ {number} ชุดข้อมูล"
+
+msgid "{number} datasets found"
+msgstr "พบ {number} ชุดข้อมูล"
+
+msgid "{number} dataset found for \"{query}\""
+msgstr "พบ {number} ชุดข้อมูลสำหรับ \"{query}\""
+
+msgid "{number} datasets found for \"{query}\""
+msgstr "พบ {number} ชุดข้อมูลสำหรับ \"{query}\""
+
+msgid "{number} group found"
+msgstr "พบ {number} กลุ่ม"
+
+msgid "{number} groups found"
+msgstr "พบ {number} กลุ่ม"
+
+msgid "{number} group found for \"{query}\""
+msgstr "พบ {number} กลุ่มสำหรับ \"{query}\""
+
+msgid "{number} groups found for \"{query}\""
+msgstr "พบ {number} กลุ่มสำหรับ \"{query}\""
+
+msgid "{number} organization found"
+msgstr "พบ {number} องค์กร"
+
+msgid "{number} organizations found"
+msgstr "พบ {number} องค์กร"
+
+msgid "{number} organization found for \"{query}\""
+msgstr "พบ {number} องค์กรสำหรับ \"{query}\""
+
+msgid "{number} organizations found for \"{query}\""
+msgstr "พบ {number} องค์กรสำหรับ \"{query}\""
+
+msgid "{num} Dataset"
+msgstr "{num} ชุดข้อมูล"
+
+msgid "{num} Datasets"
+msgstr "{num} ชุดข้อมูล"
+
+msgid "Field {num}."
+msgstr "ฟิลด์ {num}."
+
+msgid "Data Type"
+msgstr "ชนิดข้อมูล"
+
+msgid "Example"
+msgstr "ตัวอย่างข้อมูล"
+
+msgid "Site Statistics"
+msgstr "สถิติ"
+
+msgid "Recently Created Datasets"
+msgstr "ชุดข้อมูลที่มีการสร้างล่าสุด"
+
+msgid "Recently Updated Datasets"
+msgstr "ชุดข้อมูลที่มีการแก้ไขล่าสุด"
+
+msgid "Number of edits"
+msgstr "จำนวนการแก้ไข"
+
+msgid "Users Creating Most Datasets"
+msgstr "ผู้ใช้ที่เป็นเจ้าของชุดข้อมูล"
+
+msgid "Datasets by Organization"
+msgstr "ชุดข้อมูลรายองค์กร"
+
+msgid "Resources by Organization"
+msgstr "ทรัพยากรรายองค์กร"
+
+msgid "Most Active Organizations"
+msgstr "ชุดข้อมูลรายองค์กรที่มีการแก้ไขล่าสุด"
+
+msgid "Summary Statistic"
+msgstr "ภาพรวม"
+
+msgid "User Access List"
+msgstr "รายการสิทธิ์ของผู้ใช้"
+
+msgid "Users by Organization"
+msgstr "ผู้ใช้รายองค์กร"
+
+msgid "active"
+msgstr "ใช้งาน"
+
+msgid "deleted"
+msgstr "ลบแล้ว"
+
+msgid "statistics"
+msgstr "สถิติ"
+
+msgid "Dataset Type"
+msgstr "ประเภทชุดข้อมูล"
+
+msgid "Data Category"
+msgstr "หมวดหมู่ตามธรรมาภิบาลข้อมูล"
+
+msgid "WAIT_VALIDATE"
+msgstr "แจ้งลงทะเบียน"
+
+msgid "VALIDATE"
+msgstr "อยู่ระหว่างการตรวจสอบ"
+
+msgid "WAIT_VALIDATE_MODIFIED"
+msgstr "แจ้งการปรับปรุง"
+
+msgid "VALIDATE_MODIFIED"
+msgstr "อยู่ระหว่างการตรวจสอบการปรับปรุง"
+
+msgid "APPROVAL"
+msgstr "อยู่ระหว่างการอนุมัติ"
+
+msgid "COMPLETED"
+msgstr "ลงทะเบียนแล้ว"
+
+msgid "WAIT"
+msgstr "พร้อมลงทะเบียน"
+
+msgid "REJECT"
+msgstr "ไม่ผ่านเกณฑ์"
+
+msgid "WAIT_REVOKE"
+msgstr "แจ้งการเพิกถอน"
+
+msgid "VALIDATE_REVOKE"
+msgstr "อยู่ระหว่างการตรวจสอบเพิกถอน"
+
+msgid "REVOKE"
+msgstr "อยู่ระหว่างการอนุมัติเพิกถอน"
+
+msgid "Reference URL Catalog"
+msgstr "อ้างอิง URL Catalog"
+
+msgid "Your browser does not support object tags."
+msgstr "ไม่สามารถแสดงผลได้ กรุณาคลิกที่ URL เพื่อดูไฟล์"
